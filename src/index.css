@@ -1,0 +1,97 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 33% 98%;
+    --foreground: 260 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 10% 10%;
+
+    --primary: 260 50% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 260 30% 96%;
+    --secondary-foreground: 260 50% 50%;
+
+    --muted: 260 30% 96%;
+    --muted-foreground: 260 10% 50%;
+
+    --accent: 260 30% 96%;
+    --accent-foreground: 260 50% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 260 50% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 260 10% 10%;
+    --foreground: 260 10% 98%;
+
+    --card: 260 10% 12%;
+    --card-foreground: 260 10% 98%;
+
+    --popover: 260 10% 12%;
+    --popover-foreground: 260 10% 98%;
+
+    --primary: 260 50% 60%;
+    --primary-foreground: 260 10% 10%;
+
+    --secondary: 260 10% 20%;
+    --secondary-foreground: 260 10% 98%;
+
+    --muted: 260 10% 20%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 260 10% 20%;
+    --accent-foreground: 260 10% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 260 10% 98%;
+
+    --border: 260 10% 20%;
+    --input: 260 10% 20%;
+    --ring: 260 50% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for file upload zone */
+.file-drop-zone {
+  @apply border-2 border-dashed border-primary/50 rounded-xl transition-all duration-300 ease-in-out;
+}
+
+.file-drop-zone.active {
+  @apply border-primary scale-[1.02] bg-primary/5;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-converter-primary to-converter-secondary;
+}
+
+/* Hover effect for cards */
+.hover-lift {
+  @apply transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg;
+}
